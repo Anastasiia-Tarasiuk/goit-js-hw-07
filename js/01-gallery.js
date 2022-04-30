@@ -42,8 +42,27 @@ function onGalleryElClick(event) {
 		<img width="1400" height="900" src=${originalImgLink}>
 	`).show();
 
-    // const openedModal = document.querySelector('basicLightbox');
+    // const openedModal = document.querySelector('.basicLightbox');
     
     // console.log(openedModal);
 
+
 }
+
+function closeModalFromKeyboard() {
+    const openedModal = document.querySelector('.basicLightbox');
+    
+    console.log(openedModal);
+
+    
+}
+
+// document.addEventListener("keydown", event => {
+
+//     if (event.code !== "Escape") {
+//         return;
+//     }
+
+//     openedModal.close();
+// //   console.log("Keydown: ", event);
+// });

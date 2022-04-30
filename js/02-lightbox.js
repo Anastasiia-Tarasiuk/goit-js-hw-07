@@ -20,44 +20,6 @@ function createMarkup(items) {
     
 }
 
-
-// galleryEl.addEventListener('click', getGalleryImg)
-
-// function getGalleryImg() {
-// }
-
-// const lightbox = new SimpleLightbox('.gallery a', { title = alt, nav });
-
-const gallery = new SimpleLightbox('.gallery a');
-gallery.on('show.simplelightbox', function () {
-    
-    
-    // captionsData = alt;
-
-    // console.log(captionsData);
-    // captionDelay = 250;
-
+const gallery = new SimpleLightbox('.gallery a', {captionsData: 'alt', captionDelay: 250 });
+gallery.on('show.simplelightbox', function () {   
 });
-
-// gallery.on('error.simplelightbox', function (e) {
-// 	console.log(e); // some usefull information
-// });
-
-// // with jQuery nearly the same
-// let gallery = $('.gallery a').simpleLightbox();
-// gallery.on('show.simplelightbox', function () {
-// 	// do something…
-// });
-
-
-
-
-// galleryEl.addEventListener(getActiveImg);
-
-// function getActiveImg(event) {
-    
-//     // event.target = document.querySelector('gallery__image');
-    
-//     console.log(event.target);
-
-// }
