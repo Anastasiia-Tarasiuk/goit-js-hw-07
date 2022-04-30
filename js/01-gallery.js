@@ -18,7 +18,7 @@ function createMarkup(items) {
                         <img
                         class="gallery__image"
                         src=${preview}
-                        data-source="${original}"
+                        data-source=${original}
                         alt=${description}
                         />
                     </a>
@@ -41,28 +41,17 @@ function onGalleryElClick(event) {
     basicLightbox.create(`
 		<img width="1400" height="900" src=${originalImgLink}>
 	`).show();
-
-    // const openedModal = document.querySelector('.basicLightbox');
-    
-    // console.log(openedModal);
-
-
 }
 
-function closeModalFromKeyboard() {
+document.addEventListener("keydown", closeModalFromKeyboard);
+
+function closeModalFromKeyboard(event) {
     const openedModal = document.querySelector('.basicLightbox');
     
-    console.log(openedModal);
+    if (event.code === "Escape") {
+        openedModal.remove();
 
-    
+        // openedModal.close(); 
+        // openedModal.close is not a function ERROR!!!!!!!!!
+    }
 }
-
-// document.addEventListener("keydown", event => {
-
-//     if (event.code !== "Escape") {
-//         return;
-//     }
-
-//     openedModal.close();
-// //   console.log("Keydown: ", event);
-// });
